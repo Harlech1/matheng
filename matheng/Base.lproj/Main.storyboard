@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h0f-VQ-Emf">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Three Words View Controller-->
+        <scene sceneID="IgW-TC-fUm">
+            <objects>
+                <viewController id="Kaq-C2-GhV" customClass="ThreeWordsViewController" customModule="matheng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hFv-br-8Es">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f2d-mM-kpD">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xhp-fQ-fs5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xhp-fQ-fs5" firstAttribute="bottom" secondItem="f2d-mM-kpD" secondAttribute="bottom" id="A6j-kf-LBs"/>
+                            <constraint firstItem="f2d-mM-kpD" firstAttribute="top" secondItem="Xhp-fQ-fs5" secondAttribute="top" id="EgL-4Q-CdN"/>
+                            <constraint firstItem="Xhp-fQ-fs5" firstAttribute="trailing" secondItem="f2d-mM-kpD" secondAttribute="trailing" id="VJ7-np-bIS"/>
+                            <constraint firstItem="f2d-mM-kpD" firstAttribute="leading" secondItem="Xhp-fQ-fs5" secondAttribute="leading" id="Yvl-2M-PP2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IqJ-3n-mOW"/>
+                    <connections>
+                        <outlet property="tableView" destination="f2d-mM-kpD" id="Rgc-CY-eg1"/>
+                        <segue destination="pDM-4o-lyJ" kind="show" identifier="toDetails" id="maT-uO-avM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fB-Zs-u85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327.48091603053433" y="-101.40845070422536"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="l97-cM-cqU">
+            <objects>
+                <viewController id="pDM-4o-lyJ" customClass="DetailsViewController" customModule="matheng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HbE-U0-stK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rw-o2-0Ym">
+                                <rect key="frame" x="16" y="122" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEf-ev-jKl">
+                                <rect key="frame" x="16" y="164" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xwg-qM-ugL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rLH-YY-LPC"/>
+                    <connections>
+                        <outlet property="englishWordLabel" destination="4rw-o2-0Ym" id="Iyc-PY-ay0"/>
+                        <outlet property="turkishExplainingLabel" destination="eEf-ev-jKl" id="0OZ-uA-Fiz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ush-qz-11r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174.8091603053435" y="-101.40845070422536"/>
+        </scene>
+        <!--Word Of The Day View Controller-->
+        <scene sceneID="I7K-uh-iBK">
+            <objects>
+                <viewController id="ZOL-th-nsJ" customClass="WordOfTheDayViewController" customModule="matheng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dfq-AW-rY9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="⭐Writing of the Day⭐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHm-qH-ele">
+                                <rect key="frame" x="24" y="74" width="345" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vN1-Yo-zxQ">
+                                <rect key="frame" x="30" y="174" width="333" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Poincaré Conjecture, 19. yüzyılın sonlarında Fransız matematikçi Henri Poincaré tarafından ortaya atılan bir topoloji problemini ifade eder. Bu conjecture (tahmin), üç boyutlu kompakt bir manifoldün topolojik olarak "3-sfere" (3-boyutlu küresel yüzey) olup olmadığını sorgular. Diğer bir deyişle, bu manifoldün her kapalı eğriyi sıkıştırarak bir noktaya dönüştürebilir miyiz yoksa bu eğrileri birleştirmeden çekilemezler mi sorusuna yanıt arar. Poincaré Conjecture, 2002 yılında Rus matematikçi Grigori Perelman tarafından kanıtlanmış ve matematik dünyasında büyük yankı uyandırmıştır. Bu kanıt, Ricci akışı ve Ricci akışının sonsuz zaman limiti gibi kompleks geometrik kavramları içerir.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quote of the Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCH-b8-KfX">
+                                <rect key="frame" x="30" y="538" width="333" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bF-YZ-Mxe">
+                                <rect key="frame" x="30" y="577" width="333" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">“Nobody ever figures out what life is all about, and it doesn't matter. Explore the world. Nearly everything is really interesting if you go into it deeply enough.” ― Richard P. Feynman</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Poincaré conjecture" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMw-au-6zV">
+                                <rect key="frame" x="30" y="126" width="333" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bvP-Lf-pcI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="star.fill" catalog="system" selectedImage="star.fill" id="xCd-mt-FkY"/>
+                    <connections>
+                        <outlet property="quoteOfTheDayTextView" destination="2bF-YZ-Mxe" id="u2Q-6R-20u"/>
+                        <outlet property="wordOfTheDayExplanationTextView" destination="vN1-Yo-zxQ" id="cMM-Hq-tTH"/>
+                        <outlet property="wordOfTheDayLabel" destination="aMw-au-6zV" id="w5z-3l-vrP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojb-Jj-1NB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-634.35114503816794" y="-833.09859154929586"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="csL-DD-hXg">
+            <objects>
+                <tabBarController id="h0f-VQ-Emf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="olY-kI-SBw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZOL-th-nsJ" kind="relationship" relationship="viewControllers" id="y5a-0H-iHm"/>
+                        <segue destination="maJ-lL-oXI" kind="relationship" relationship="viewControllers" id="EPg-Z7-iLZ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="39f-kl-yKY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvU-Jz-naE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1483" y="-101"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="matheng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="gearshape" catalog="system" id="plc-e9-EcT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599" y="604"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Prq-jY-AIa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="maJ-lL-oXI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="3.circle.fill" catalog="system" selectedImage="3.circle.fill" id="CXi-P9-7IE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sA7-Sv-zpK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kaq-C2-GhV" kind="relationship" relationship="rootViewController" id="lfi-5J-6cy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2G6-Mb-5Mk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599.23664122137404" y="-101.40845070422536"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
